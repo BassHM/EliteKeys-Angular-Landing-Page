@@ -9,7 +9,9 @@ import { InicioComponent } from './inicio/inicio.component';
 import { CualidadesComponent } from './inicio/cualidades/cualidades.component';
 import { ContactoComponent } from './inicio/contacto/contacto.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {MatIconModule} from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,15 +19,19 @@ import { AppRoutingModule } from './app-routing.module';
     InicioComponent,
     CualidadesComponent,
     ContactoComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     NgbModule,
     BrowserAnimationsModule,
     NgbNavModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatIconModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

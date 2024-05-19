@@ -1,1 +1,17 @@
-<p>cualidades works!</p>
+<div class="features-container">
+    <h2 class="features-title">{{ dataStructure.title }}</h2>
+    <p class="features-description">{{ dataStructure.description }}</p>
+  
+    <div class="features-grid">
+      <ng-container *ngFor="let feature of dataStructure.features">
+        <div class="feature-card">
+          <mat-icon>{{feature.icon}}</mat-icon>
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </div>
+      </ng-container>
+    </div>
+  
+    <a [routerLink]="dataStructure.callToAction.link" class="features-cta mat-raised-button">{{ dataStructure.callToAction.text }}</a>
+  </div>
+  

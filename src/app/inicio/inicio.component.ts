@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
 })
 export class InicioComponent {
   active: number = 1;
+  
 }
