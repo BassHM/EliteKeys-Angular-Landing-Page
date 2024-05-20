@@ -1,0 +1,10 @@
+<div class="teclados-container">
+    <div class="teclados-grid">
+      <ng-container *ngFor="let teclado of dataStructure.teclados">
+        <div class="teclado-card">
+            <img [src]="'assets/tecladosImagenes/' + teclado.imagen" alt="">
+            <h3>{{ teclado.Titulo }}</h3>
+        </div>
+    </ng-container>
+  </div>
+</div>

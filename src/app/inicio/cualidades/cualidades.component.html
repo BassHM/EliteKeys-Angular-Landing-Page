@@ -1,17 +1,25 @@
 <div class="features-container">
-    <h2 class="features-title">{{ dataStructure.title }}</h2>
-    <p class="features-description">{{ dataStructure.description }}</p>
-  
-    <div class="features-grid">
-      <ng-container *ngFor="let feature of dataStructure.features">
-        <div class="feature-card">
-          <mat-icon>{{feature.icon}}</mat-icon>
-          <h3>{{ feature.title }}</h3>
-          <p>{{ feature.description }}</p>
-        </div>
-      </ng-container>
-    </div>
-  
-    <a [routerLink]="dataStructure.callToAction.link" class="features-cta mat-raised-button">{{ dataStructure.callToAction.text }}</a>
+  <div class="features-container-header">
+    <h2 class="features-title">{{ dataStructure.titulo }}</h2>
+    <p class="features-description">{{ dataStructure.descripcion }}</p>
   </div>
-  
+  <div class="video-card">
+    <video src="/assets/EliteKeysVideo.mp4" autoplay muted loop class="video-elite-keys"></video>
+  </div>
+  <div class="features-container-header">
+    <h2 class="features-title">{{ dataStructure.tituloTeclados }}</h2>
+  </div>
+  <app-carrusel class="teclados-component"></app-carrusel>
+  <div class="features-container-header">
+    <h2 class="features-title">{{ dataStructure.tituloCaracteristicas }}</h2>
+  </div>
+  <div class="features-grid">
+    <ng-container *ngFor="let feature of dataStructure.caracteristicas">
+      <div class="feature-card">
+        <mat-icon>{{feature.icono}}</mat-icon>
+        <h3>{{ feature.titulo }}</h3>
+        <p>{{ feature.descripcion }}</p>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+
+.teclados-container {
+    overflow: auto;
+    max-width: 1300px; /* Maintain intended max-width */
+    padding-bottom: 30px;
+  }
+.teclados-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Enable wrapping */
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .teclado-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 30%;
+
+    //box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition */
+  }
+  
+  .teclado-card mat-icon {
+    margin-bottom: 10px;
+  }
+  
+  .teclado-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .teclado-card img {
+    width: 100%;
+  }
+  
+  
+  .teclado-card:hover {
+    transform: scale(1.05); /* Add hover effect - scale up slightly */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  }
+  
+  @media screen and (max-width:1000px) {
+      .teclado-card {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 15px;
+          max-width: 45%;
+
+          //box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+          /* Add transition */
+      }
+
+  }
+  @media screen and (max-width:500px) {
+    .teclado-card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        max-width: 100%;
+
+        //box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        /* Add transition */
+    }
+
+}

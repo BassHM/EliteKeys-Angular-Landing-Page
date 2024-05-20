@@ -1,0 +1,45 @@
+{
+    "teclados": [
+      {
+        "imagen": "60.png",
+        "Titulo": "V4 60%"
+      },
+      {
+        "imagen": "65.png",
+        "Titulo": "K1 65%"
+      },
+      {
+        "imagen": "65Ergo.png",
+        "Titulo": "Ergo K1 60%"
+      },
+      {
+        "imagen": "70.png",
+        "Titulo": "Q7 70%"
+      },
+      {
+        "imagen": "75.png",
+        "Titulo": "Q7 Max 75%"
+      },
+      {
+        "imagen": "75Ergo.png",
+        "Titulo": "Ergo Q7 Max 75%"
+      },
+      {
+        "imagen": "80.png",
+        "Titulo": "TKL 80%"
+      },
+      {
+        "imagen": "96.png",
+        "Titulo": "Giant 96%"
+      },
+      {
+        "imagen": "100.png",
+        "Titulo": "Titan 100%"
+      },
+      {
+        "imagen": "96Ergo.png",
+        "Titulo": "Ergo Titan 96% Ergonómico"
+      }
+    ]
+  }
+  

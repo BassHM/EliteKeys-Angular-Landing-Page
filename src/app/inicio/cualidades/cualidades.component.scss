@@ -1,62 +1,162 @@
 /* features.component.css */
 .features-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.features-container-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.features-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.features-description {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.features-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  gap: 90px;
+  margin-bottom: 80px;
+}
+
+.feature-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  //box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  /* Add transition */
+}
+
+.feature-card mat-icon {
+  margin-bottom: 10px;
+}
+
+.feature-card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+.feature-card:hover {
+  transform: scale(1.05);
+  /* Add hover effect - scale up slightly */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  /* Enhance shadow on hover */
+}
+
+
+.features-cta {
+  max-width: 1000px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 15px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.video-card {
+  position: relative;
+  /* For overlaying play button */
+  width: 120%;
+  /* Adjust width as needed */
+  height: 120%;
+  /* Adjust height as needed */
+  overflow: hidden;
+  /* Hide overflowing video content */
+  border-radius: 50px;
+  /* Add rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Add subtle shadow */
+  margin-bottom: 80px;
+}
+
+.video-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensure video fills the container */
+  border-radius: 15px;
+}
+
+.video-card::before {
+  content: "";
+  /* Add an empty element for overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* Semi-transparent black overlay */
+  opacity: 0;
+  /* Initially hide the overlay */
+  transition: opacity 0.3s ease-in-out;
+  /* Add smooth transition */
+}
+
+.video-card:hover::before {
+  opacity: 1;
+  /* Show overlay on hover */
+}
+
+.video-card::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Center the icon */
+  color: white;
+  /* Icon color */
+  font-size: 30px;
+  /* Adjust icon size */
+  opacity: 0;
+  /* Initially hide the icon */
+  transition: opacity 0.3s ease-in-out;
+  /* Add smooth transition */
+}
+
+.video-card:hover::after {
+  opacity: 1;
+  /* Show icon on hover */
+}
+.teclados-component{
+  margin-bottom: 80px;
+}
+
+@media screen and (max-width:1500px) {
+  .video-card {
+    width: 100%;
+    /* Adjust width as needed */
+    height: 100%;
+    /* Adjust height as needed */
   }
-  
-  .features-title {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .features-description {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 40px;
-  }
-  
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
-  
-  .feature-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .feature-card mat-icon {
-    font-size: 48px;
-    margin-bottom: 20px;
-  }
-  
-  .feature-card h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .feature-card p {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
-  .features-cta {
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 4px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-  }
-  
+
+}
