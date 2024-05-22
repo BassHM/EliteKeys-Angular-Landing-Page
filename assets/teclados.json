@@ -1,0 +1,55 @@
+{
+    "teclados": [
+      {
+        "imagen": "60.png",
+        "Titulo": "V4 60%",
+        "ColorAux": "elitekey-rosa"
+      },
+      {
+        "imagen": "65.png",
+        "Titulo": "K1 65%",
+        "ColorAux": "elitekey-amarillo"
+      },
+      {
+        "imagen": "65Ergo.png",
+        "Titulo": "Ergo K1 60%",
+        "ColorAux": "elitekey-azul"
+      },
+      {
+        "imagen": "70.png",
+        "Titulo": "Q7 70%",
+        "ColorAux": "elitekey-rosa"
+      },
+      {
+        "imagen": "75.png",
+        "Titulo": "Q7 Max 75%",
+        "ColorAux": "elitekey-amarillo"
+      },
+      {
+        "imagen": "75Ergo.png",
+        "Titulo": "Ergo Q7 Max 75%",
+        "ColorAux": "elitekey-azul"
+      },
+      {
+        "imagen": "80.png",
+        "Titulo": "TKL 80%",
+        "ColorAux": "elitekey-rosa"
+      },
+      {
+        "imagen": "96.png",
+        "Titulo": "Giant 96%",
+        "ColorAux": "elitekey-amarillo"
+      },
+      {
+        "imagen": "100.png",
+        "Titulo": "Titan 100%",
+        "ColorAux": "elitekey-azul"
+      },
+      {
+        "imagen": "96Ergo.png",
+        "Titulo": "Ergo Titan 96% Ergonómico",
+        "ColorAux": "elitekey-rosa"
+      }
+    ]
+  }
+  

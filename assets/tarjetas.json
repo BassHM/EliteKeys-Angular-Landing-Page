@@ -1,0 +1,48 @@
+{
+    "titulo": "Teclados mecánicos personalizados",
+    "descripcion": "Creamos teclados hechos a tu medida, desde la sensación de cada tecla hasta un diseño increíble que ilumina tu espacio de trabajo.",
+    "tituloCaracteristicas": "Lo que ofrecemos",
+    "tituloTeclados": "Lo que consigues",
+    "caracteristicas": [
+      
+      {
+        "icono": "hardware",
+        "ColorAux": "elitekey-rosa",
+        "titulo": "Componentes de alta calidad",
+        "descripcion": "Interruptores de alta calidad y materiales de primera. Marcos de aluminio resistentes y elegantes. Teclas PBT lujosas para mayor comodidad y durabilidad. Cada componente elegido para brindar estilo, funcionalidad y una experiencia de escritura inigualable."
+      },
+      {
+        "icono": "keyboard",
+        "ColorAux": "elitekey-amarillo",
+        "titulo": "Variedad para todos",
+        "descripcion": "Interruptores mecánicos para un clic satisfactorio. Membranas para una escritura silenciosa. Diseños minimalistas para una estética moderna. Configuraciones vibrantes y llamativas para destacar tu personalidad."
+      },
+      {
+        "icono": "palette",
+        "ColorAux": "elitekey-azul",
+        "titulo": "Iluminación RGB personalizable",
+        "descripcion": "Elige entre una amplia gama de colores para iluminar tus sesiones de juego o tu espacio de trabajo. Crea la atmósfera perfecta para cada ocasión."
+      },
+      {
+        "icono": "attach_money",
+        "ColorAux": "elitekey-rosa",
+        "titulo": "Accesibilidad",
+        "descripcion": "Calidad y accesibilidad de la mano. Teclados personalizados que no tienen que costar una fortuna."
+      }
+    ],
+    "llamada_accion": {
+      "texto": "¿Por qué conformarte con lo genérico? Pide un teclado hecho solo para ti. Actualízate a un teclado tan único como tú. Sumérgete en el mundo de los teclados personalizados y crea algo increíble juntos.",
+      "boton": {
+        "texto": "Explora nuestros teclados",
+        "enlace": "/teclados"
+      }
+    },
+    "frases_adicionales": [
+      "Más que un teclado, una obra de arte.",
+      "Teclados personalizados: donde la función se encuentra con la estética.",
+      "Sube de nivel tu experiencia de escritura.",
+      "Exprésate a través de tu teclado.",
+      "El teclado perfecto para ti está aquí."
+    ]
+  }
+  
