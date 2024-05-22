@@ -10,6 +10,7 @@
     flex-wrap: wrap; /* Enable wrapping */
     justify-content: center;
     gap: 20px;
+    margin-top: 15px;
   }
   
   .teclado-card {
@@ -21,7 +22,38 @@
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition */
   }
-  
+  .boxShadow-elitekey-azul{
+    box-shadow: 0 5px 10px var(--elitekey-azul);
+  }
+  .boxShadow-elitekey-rosa{
+    box-shadow: 0 5px 10px var(--elitekey-rosa); 
+  }
+  .boxShadow-elitekey-amarillo{
+    box-shadow: 0 5px 10px var(--elitekey-amarillo); 
+  }
+
+  // //Hover en el Icono
+  // .filterIcon-elitekey-azul > mat-icon{
+  //   transition: filter 0.3s ease-in-out, color 0.3s ease-in-out; /* Add transition */
+  // }
+  // .filterIcon-elitekey-azul:hover > mat-icon{
+  //   filter: drop-shadow(3px 5px 2px var(--bg-color));
+  // }
+  // .filterIcon-elitekey-rosa{
+  //   transition: filter 0.3s ease-in-out, color 0.3s ease-in-out; /* Add transition */
+  // }
+  // .filterIcon-elitekey-amarillo{
+  //   transition: filter 0.3s ease-in-out, color 0.3s ease-in-out; /* Add transition */
+  // }
+  // .filterIcon-elitekey-rosa :hover{
+  //   color: var(--elitekey-rosa);
+  //   filter: drop-shadow(3px 5px 2px var(--bg-color));
+  // }
+  // .filterIcon-elitekey-amarillo :hover{
+  //   color: var(--elitekey-amarillo);
+  //   filter: drop-shadow(3px 5px 2px var(--bg-color));
+  // }
+
   .teclado-card mat-icon {
     margin-bottom: 10px;
   }
@@ -37,8 +69,8 @@
   
   
   .teclado-card:hover {
-    transform: scale(1.05); /* Add hover effect - scale up slightly */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    transform: scale(1.05); 
+    box-shadow: 0 5px 10px var(--color-ligero); 
   }
   
   @media screen and (max-width:1000px) {

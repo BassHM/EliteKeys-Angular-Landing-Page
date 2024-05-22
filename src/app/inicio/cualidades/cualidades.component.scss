@@ -1,4 +1,8 @@
 /* features.component.css */
+.main{
+  background-color: var(--bg-color);
+
+}
 .features-container {
   display: flex;
   flex-direction: column;
@@ -6,6 +10,10 @@
   padding: 20px;
   max-width: 1500px;
   margin: 0 auto;
+}
+
+.features-container-header > h2, p {
+  color:var(--color-ligero);
 }
 
 .features-container-header {
@@ -32,16 +40,17 @@
 .features-grid {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(435px, 1fr));
-  gap: 90px;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   margin-bottom: 80px;
+  max-width: 90%;
+  gap:24px
 }
 
 .feature-card {
   background-color: #fff;
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgb(255, 255, 255);
   text-align: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   /* Add transition */
@@ -60,44 +69,72 @@
 .feature-card p {
   font-size: 16px;
   line-height: 1.5;
+  color: rgb(0, 0, 0);
 }
-
 
 .feature-card:hover {
   transform: scale(1.05);
-  /* Add hover effect - scale up slightly */
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  /* Enhance shadow on hover */
+  box-shadow: 0 5px 10px var(--color-ligero); 
+}
+.boxShadow-elitekey-azul {
+  box-shadow: 0 5px 10px var(--elitekey-azul);
+}
+.boxShadow-elitekey-azul > mat-icon{
+  transition: filter 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.boxShadow-elitekey-azul:hover > mat-icon{
+  color: var(--elitekey-azul);
+  filter: drop-shadow(0px 3px 6px var(--bg-color)); 
+}
+.boxShadow-elitekey-rosa{
+  box-shadow: 0 5px 10px var(--elitekey-rosa); 
+}
+.boxShadow-elitekey-rosa > mat-icon{
+  transition: filter 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.boxShadow-elitekey-rosa:hover > mat-icon{
+  color: var(--elitekey-rosa);
+  filter: drop-shadow(0px 3px 6px var(--bg-color)); 
+}
+.boxShadow-elitekey-amarillo{
+  box-shadow: 0 5px 10px var(--elitekey-amarillo); 
+}
+.boxShadow-elitekey-amarillo > mat-icon{
+  transition: filter 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.boxShadow-elitekey-amarillo:hover > mat-icon{
+  color: var(--elitekey-amarillo);
+  filter: drop-shadow(0px 3px 6px var(--bg-color)); 
 }
 
-
-.features-cta {
-  max-width: 1000px;
-  background-color: #007bff;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 15px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
+@keyframes circleLight {
+  0% {
+    box-shadow: 5px 0px 3px var(--elitekey-azul); /* Start from right */
+  }
+  25% {
+    box-shadow: 0px 5px 3px var(--elitekey-rosa);
+  }
+  50% {
+    box-shadow: -5px 0px 3px var(--elitekey-amarillo); /* Move to left (center) */
+  }
+  75% {
+    box-shadow: 0px -5px 3px var(--elitekey-rosa);
+  }
+  100% {
+    box-shadow: 5px 0px 3px var(--elitekey-azul); /* Back to right */
+  }
 }
 
+/* Apply the animation to the.video-card class */
 .video-card {
   position: relative;
-  /* For overlaying play button */
   width: 100%;
-  /* Adjust width as needed */
   height: 100%;
-  /* Adjust height as needed */
   overflow: hidden;
-  /* Hide overflowing video content */
   border-radius: 50px;
-  /* Add rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  /* Add subtle shadow */
   margin-bottom: 80px;
+  animation: circleLight 4s infinite linear; /* Adjust the duration and timing function as needed */
 }
-
 .video-card video {
   width: 100%;
   height: 100%;
@@ -108,18 +145,15 @@
 
 .video-card::before {
   content: "";
-  /* Add an empty element for overlay */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-  /* Semi-transparent black overlay */
   opacity: 0;
-  /* Initially hide the overlay */
   transition: opacity 0.3s ease-in-out;
-  /* Add smooth transition */
+
 }
 
 .video-card:hover::before {

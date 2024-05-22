@@ -1,31 +1,33 @@
-<div class="features-container">
-  <div class="features-container-header">
-    <h2 class="features-title">{{ dataStructure.titulo }}</h2>
-    <p class="features-description">{{ dataStructure.descripcion }}</p>
-  </div>
-  <div class="video-card">
-    <video src="/assets/EliteKeysVideo.mp4" autoplay muted loop class="video-elite-keys"></video>
-  </div>
-  <div class="features-container-header">
-    <h2 class="features-title">{{ dataStructure.tituloTeclados }}</h2>
-  </div>
-  <app-carrusel class="teclados-component"></app-carrusel>
-  <div class="features-container-header">
-    <h2 class="features-title">{{ dataStructure.tituloCaracteristicas }}</h2>
-  </div>
-  <div class="features-grid">
-    <ng-container *ngFor="let feature of dataStructure.caracteristicas">
-      <div class="feature-card">
-        <mat-icon>{{feature.icono}}</mat-icon>
-        <h3>{{ feature.titulo }}</h3>
-        <p>{{ feature.descripcion }}</p>
-      </div>
-    </ng-container>
-    <div class="feature-card">
-        <img src="/assets/tecladosImagenes/60.png" alt="">
-        <mat-icon>check</mat-icon>
-        <h3>Test</h3>
-        <p>texto de ejemplo</p>
-      </div>
+<div class="main">
+  <div class="features-container">
+    <div class="features-container-header">
+      <h2 class="features-title">{{ dataStructure.titulo }}</h2>
+      <p class="features-description">{{ dataStructure.descripcion }}</p>
+    </div>
+    <div class="video-card">
+      <video src="/assets/EliteKeysVideo.mp4" autoplay muted loop class="video-elite-keys"></video>
+    </div>
+    <div class="features-container-header">
+      <h2 class="features-title">{{ dataStructure.tituloTeclados }}</h2>
+    </div>
+    <app-carrusel class="teclados-component"></app-carrusel>
+    <div class="features-container-header">
+      <h2 class="features-title">{{ dataStructure.tituloCaracteristicas }}</h2>
+    </div>
+    <div class="features-grid">
+      <ng-container *ngFor="let feature of dataStructure.caracteristicas">
+        <div class="feature-card" [ngClass]="'boxShadow-' + feature.ColorAux + ' filterIcon-' + feature.ColorAux">
+          <mat-icon>{{feature.icono}}</mat-icon>
+          <h3>{{ feature.titulo }}</h3>
+          <p>{{ feature.descripcion }}</p>
+        </div>
+      </ng-container>
+    </div>
+    <div class="features-container-header">
+      <h2 class="features-title">¿Quieres el tuyo?</h2>
+    </div>
+    <div class="mb-5">
+      <button mat-raised-button color="accent" (click)="this.router.navigate(['/contacto']);" >Pide tu teclado personalizado aquí</button>
+    </div>
   </div>
 </div>

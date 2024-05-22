@@ -1,1 +1,79 @@
-<p>contacto works!</p>
+<div class="main">
+    <div class="features-container">
+      <div class="row">
+        
+        <div class="col-12 d-flex justify-content-center">
+            <mat-icon class="icono">keyboard</mat-icon>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <h2>¿Cómo deseas tu nuevo teclado?</h2>
+        </div>
+        <mat-form-field class="col-md-4">
+          <mat-label>Tipo de Switch</mat-label>
+          <mat-select formControlName="switchType" required>
+            <mat-option *ngFor="let switchType of switchTypes" [value]="switchType">
+              {{ switchType }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <mat-form-field class="col-md-4">
+          <mat-label>Color de la Carcasa</mat-label>
+          <mat-select formControlName="caseColor" required>
+            <mat-option *ngFor="let caseColor of caseColors" [value]="caseColor">
+              {{ caseColor }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <mat-form-field class="col-md-4">
+          <mat-label>Color de las Keycaps</mat-label>
+          <mat-select formControlName="keycapColor" required>
+            <mat-option *ngFor="let keycapColor of keycapColors" [value]="keycapColor">
+              {{ keycapColor }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <mat-form-field class="col-md-5">
+          <mat-label>Distribución</mat-label>
+          <mat-select formControlName="layout" required>
+            <mat-option *ngFor="let layout of layouts" [value]="layout">
+              {{ layout }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <mat-form-field class="col-md-5">
+          <mat-label>Tamaño (ej. 60%, 75%)</mat-label>
+          <mat-select formControlName="formFactor" required>
+            <mat-option *ngFor="let formFactor of formFactors" [value]="formFactor">
+              {{ formFactor }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <div class="col-md-2 mb-3 d-flex justify-content-center">
+          <mat-checkbox formControlName="hasRgb">Iluminación RGB</mat-checkbox>
+        </div>
+  
+        <mat-form-field class="col-md-3">
+          <mat-label>Presupuesto</mat-label>
+          <input matInput type="number" formControlName="budget" required>
+        </mat-form-field>
+  
+        <mat-form-field class="col-md-6">
+          <mat-label>Comentarios o Requisitos Específicos</mat-label>
+          <textarea matInput formControlName="comments"></textarea>
+        </mat-form-field>
+        <mat-form-field class="col-md-3">
+            <mat-label>Correo electrónico</mat-label>
+            <input matInput type="text" formControlName="email" required>
+          </mat-form-field>
+        <div class="col-md-4"></div>
+        <button class="col-md-4" mat-raised-button color="primary" type="submit">Enviar por correo</button>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+  </div>
+  
