@@ -32,16 +32,16 @@
 .features-grid {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(435px, 1fr));
   gap: 90px;
   margin-bottom: 80px;
 }
 
 .feature-card {
   background-color: #fff;
-  padding: 30px;
+  padding: 25px;
   border-radius: 15px;
-  //box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   /* Add transition */
@@ -85,9 +85,9 @@
 .video-card {
   position: relative;
   /* For overlaying play button */
-  width: 120%;
+  width: 100%;
   /* Adjust width as needed */
-  height: 120%;
+  height: 100%;
   /* Adjust height as needed */
   overflow: hidden;
   /* Hide overflowing video content */
@@ -150,13 +150,20 @@
 .teclados-component{
   margin-bottom: 80px;
 }
+.feature-card img{
+    position: fixed;
+    margin: 0;
+    
+    //background-image: linear-gradient(to bottom, transparent, alpha(opacity=20));
+}
 
-@media screen and (max-width:1500px) {
+@media screen and (max-width: 1500px) {
   .video-card {
     width: 100%;
-    /* Adjust width as needed */
     height: 100%;
-    /* Adjust height as needed */
   }
-
+  .feature-card {
+    max-width: 90%;
+    justify-self: center;
+  }
 }
