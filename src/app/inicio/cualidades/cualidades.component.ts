@@ -10,7 +10,7 @@ export class CualidadesComponent implements OnInit{
   dataStructure: any = {};
   constructor(private http: HttpClient, public router: Router) { }
   ngOnInit(): void {
-      this.http.get("/assets/tarjetas.json").subscribe(res=>{
+      this.http.get("assets/tarjetas.json").subscribe(res=>{
         this.dataStructure = res;
         console.log(this.dataStructure);
       }, error => {

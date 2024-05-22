@@ -15,7 +15,7 @@ export class CarruselComponent implements OnInit{
   showNavigationArrows = false; 
   constructor(private http: HttpClient) { }
   ngOnInit(): void {
-    this.http.get("/assets/teclados.json").subscribe(res=>{
+    this.http.get("assets/teclados.json").subscribe(res=>{
       this.dataStructure = res;
       console.log(this.dataStructure);
     }, error => {
